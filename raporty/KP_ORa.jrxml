@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KP_PR" language="groovy" pageWidth="612" pageHeight="792" columnWidth="467" leftMargin="65" rightMargin="80" topMargin="65" bottomMargin="0" uuid="3ba1ec79-5c43-455e-a44e-af5abb7ecccb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM `VRAP1`
+WHERE `DATASZKOLENIA` LIKE '%19.03.2014%']]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATASZKOLENIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="692" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement uuid="6667df08-5417-44cd-9412-1ee6d70f199c" x="11" y="14" width="222" height="178"/>
+				<imageExpression><![CDATA["png\\LogoAlpekspro1.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="3ec05fdf-8e21-4d94-88cd-deb551b56798" x="319" y="46" width="108" height="92"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\lo.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="42e1bc77-f6ec-4ec4-af61-735a1e35c82a" x="307" y="173" width="132" height="50"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\BHP.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="a30718d8-3e8b-45af-bcc7-be6ddaad6fd4" x="0" y="233" width="467" height="24"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZAŚWIADCZENIE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="185e4589-49d0-447d-9150-6274a41c6b02" x="0" y="257" width="467" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[o ukończeniu szkolenia w dziedzinie bezpieczeństwa i higieny pracy ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b284914-1b13-4393-8103-a6cc8109691c" x="15" y="380" width="439" height="151"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[zorganizowanego w formie kursu przez firmę Alpeks Pro z Poznania na zlecenie Zakładu Sprzętu Ortopedycznego AS ORTOPEDYKA, ul. Piekary 6/1,
+61 – 853 Poznań.
+
+Celem szkolenia była aktualizacja i uzupełnienie wiedzy i umiejętności
+ w szczególności z zakresu:
+   a) oceny zagrożeń występujących w procesach pracy oraz ryzyka związanego
+   z tymi zagrożeniami,
+   b) kształtowania bezpiecznych i higienicznych warunków pracy,
+   c) ochrony pracowników przed zagrożeniami związanymi z wykonywaną pracą.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b38e8021-470b-41f1-b718-1642ac7252ca" x="15" y="310" width="164" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "Pan" : "Pani"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b5334d8-1e81-4add-9ab1-6a282caaec80" x="15" y="337" width="91" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM}=="M"?"urodzony":"urodzona"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2758a7da-5a23-4b3d-81e6-b9f999d2b238" x="76" y="337" width="162" height="22" forecolor="#000066"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URODZONY}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d6b0702f-5e99-4724-8761-3812ec700d14" x="15" y="362" width="188" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "ukończył" : "ukończyła"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="15e46f04-13b7-41e6-a15f-e6eb41264b93" x="15" y="361" width="439" height="21" forecolor="#000066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[szkolenie okresowe dla osób kierujących pracownikam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d46e38aa-b945-456d-8992-040e803cb247" x="15" y="534" width="439" height="39"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Zaświadczenie wydano na podstawie §16 ust. 3 Rozporządzenia Ministra Gospodarki i Pracy z dnia 27 lipca 2004 r. w sprawie szkolenia w dziedzinie bezpieczeństwa i higieny pracy (Dz. U. nr 180, poz. 1860, z późniejszymi zmianami).
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1c22aae7-367a-4685-8906-e316c556bd29" x="286" y="577" width="131" height="80"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Przedstawiciel organizatora
+szkolenia
+
+
+Waldemar Kowalak
+współwłaściciel Alpeks Pro
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2d5434a3-f90a-42b4-9baa-c933d87b141e" x="15" y="675" width="164" height="14"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Poznań, "+$F{DATASZKOLENIA}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="02c8f58f-1890-4ffb-a48f-a6d0aa938cec" x="268" y="675" width="183" height="14"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nr zaświadczenia: "+$F{ZASWIADCZENIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5bd77181-8014-4003-a6d4-0ce1291ae59b" x="15" y="308" width="452" height="21" forecolor="#000066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IMIE} + " " + $F{NAZWISKO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

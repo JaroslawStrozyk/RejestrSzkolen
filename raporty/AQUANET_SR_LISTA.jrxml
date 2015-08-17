@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AQUANET_SR_LISTA" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true" uuid="c0d8aa53-fb39-48af-9106-e108f8dfd508">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="264"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM VRAP1 WHERE ZASWIADCZENIE LIKE '%SR_AQ%' ORDER BY NAZWISKO ASC]]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="COUNT_ALL" class="java.lang.String" incrementType="Report" calculation="Count">
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="700" splitType="Stretch">
+			<image>
+				<reportElement x="278" y="46" width="277" height="74" uuid="372ee038-ba6f-4b1b-9f2e-c15b405b66ce"/>
+				<imageExpression><![CDATA["png//LogoAquanet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="2" y="271" width="553" height="75" uuid="246dbcad-19bc-482d-a5e4-2fbd46baa624"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" pdfFontName="Times-Roman" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lista Obecności]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="2" y="467" width="553" height="49" uuid="ecf6c396-8ecf-4f93-b0a8-ec4cc1631057"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" pdfFontName="Times-Roman" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Pracowników zatrudnionych na stanowiskach produkcyjnych
+szkolenia organizowanego przez firmę AlpeksPro z Poznania.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="28" y="46" width="221" height="69" uuid="7b3ac561-d41b-4647-834b-d1d348f72d44"/>
+				<imageExpression><![CDATA["png//logo_ap.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="25" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="982e721a-868a-4263-8fb7-2e20f08a02b8"/>
+				<staticText>
+					<reportElement style="Column header" x="208" y="0" width="85" height="23" forecolor="#736343" uuid="17efb4e8-dcb9-4b24-9ed7-547b5cb3d5c9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[URODZONY/A]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="121" y="0" width="86" height="23" forecolor="#736343" uuid="e749d551-5e1c-4736-b02e-89d0de7ed683"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[IMIĘ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="294" y="0" width="118" height="23" forecolor="#736343" uuid="6884d7ff-fec1-49d9-a777-c127f09dfe49"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[DATA SZKOLENIA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="413" y="0" width="137" height="23" forecolor="#736343" uuid="234a32cf-3835-4269-9585-190f54a501cf"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[PODPIS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1" y="0" width="29" height="23" forecolor="#736343" uuid="ba602089-bc46-4776-a20e-2aada555cd2e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[LP]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="294" y="0" width="1" height="25" uuid="817d207e-2cef-4d5f-8d7a-2c45789eaa65"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="412" y="0" width="1" height="25" uuid="44b8dfe8-4703-4220-a79f-8aebacc1cef0"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="119" y="0" width="1" height="25" uuid="b0d78fe9-97a6-46dc-9562-9d1c541af65a"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="207" y="0" width="1" height="25" uuid="2c5a989a-4b86-405a-9d94-80cfc13f38c5"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="31" y="0" width="1" height="25" uuid="6acabd80-8d28-4098-92e6-746fba6f1da0"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement style="Column header" x="32" y="0" width="85" height="23" forecolor="#736343" uuid="3b904032-1a27-4c57-bf5f-b593009cd66a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[NAZWISKO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Prevent">
+			<rectangle>
+				<reportElement style="Row" mode="Transparent" x="0" y="0" width="31" height="25" forecolor="#000000" uuid="989abcbc-4a76-42ee-b9dc-05cdca46291e"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="31" y="0" width="88" height="25" forecolor="#000000" uuid="2907102d-a077-45c4-b17e-ce961ef4093a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="119" y="0" width="88" height="25" forecolor="#000000" uuid="f0f06903-f734-4fc3-b9bc-f8554d4cc64f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="207" y="0" width="87" height="25" forecolor="#000000" uuid="1922e5a6-78ea-45ff-bfb8-4c7f2809c3fb"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="294" y="0" width="118" height="25" forecolor="#000000" uuid="a07e7dfd-ffc2-4f50-9c8c-57cf6e6aec91"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="412" y="0" width="143" height="25" forecolor="#000000" uuid="12a958cb-f846-41c5-88de-c097d0a3a0ea"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Row" mode="Transparent" x="2" y="2" width="26" height="21" forecolor="#FFFFFF" backcolor="#CCFFCC" uuid="c6216959-e6db-49e9-ade2-98eda9b25ddd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" x="32" y="2" width="85" height="21" forecolor="#FFFFFF" backcolor="#CCFFCC" uuid="27732d92-340d-4346-9c08-6b91a705c82c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAZWISKO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" x="121" y="2" width="85" height="21" forecolor="#FFFFFF" uuid="6791a271-77fb-4e09-9670-3e9c7775d720"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IMIE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" mode="Opaque" x="209" y="2" width="84" height="21" forecolor="#FFFFFF" uuid="e2d0cf68-39c1-4952-a6d1-41310f0c2559"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URODZONY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="32" y="5" width="85" height="20" uuid="be84cc2f-87dd-4bc8-8e3f-d08feaf7c1d8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NAZWISKO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="5" width="87" height="20" uuid="ffeb8d35-0080-45ac-9b65-6a00f910ae97"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{IMIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="5" width="86" height="20" uuid="a3204e3a-722c-4793-b33a-552edebe2d6d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{URODZONY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="772c78af-4155-4481-b865-172c7098e95b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="0dd433f1-76ff-46e6-bba9-936cbd72350c"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#F2EBDF" uuid="e212df33-8e4e-4c39-a61c-d4a15b259d8e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="219" y="0" width="314" height="20" forecolor="#F2EBDF" uuid="de1a503c-25d8-448e-a6e2-3dbf554d29c9"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Strona "+$V{PAGE_NUMBER}+" z "]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="8ed0f2ba-c33c-4ee2-b259-fd8ffcc0b615"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

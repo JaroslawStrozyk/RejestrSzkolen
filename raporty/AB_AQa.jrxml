@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AB_AQa" language="groovy" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81e85fc7-b224-427d-8020-37d533ba120f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM `vrap1`
+WHERE `DATASZKOLENIA` LIKE '%13.12.2013%']]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATASZKOLENIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="552" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="72d0d359-9b2f-4d0f-98d7-159bdc9de45e" x="1" y="1" width="379" height="550" forecolor="#99FF99"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="ce8c6cec-2093-4cf1-95e2-bcbee9c9e94d" x="5" y="13" width="169" height="46"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\logo_ap.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="81d3619e-ef66-4a46-950f-e15960220058" x="192" y="27" width="177" height="42"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\LogoAquanet.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="797ba35e-d77a-4a27-82bd-3daafe62394b" x="279" y="73" width="45" height="25"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\BHP.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="43e35bb0-9c0e-4b4b-a688-8084b4399ac3" x="0" y="104" width="381" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZAŚWIADCZENIE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3580d856-4f00-45d4-b8de-cba4b2d3e054" x="0" y="123" width="381" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[o ukończeniu szkolenia w dziedzinie bezpieczeństwa i higieny pracy ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bf0ceb2e-66cb-48a5-9264-9a71128cc0eb" x="9" y="152" width="164" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "Pan" : "Pani"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="108755f9-8e9d-47a8-92ad-1b7b1d1e7306" x="5" y="534" width="164" height="14"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Poznań, "+$F{DATASZKOLENIA}+"r."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bdee009f-1cd0-4dc8-bcb7-b065f169e721" x="9" y="190" width="360" height="35" forecolor="#000066"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[	   szkolenie okresowe pracowników zatrudnionych na stanowiskach adminstracyjno - biurowych,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e3875a79-24d4-4d9b-b4e7-395d7d2bcd9d" x="263" y="430" width="107" height="52"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Organizator szkolenia
+
+Waldemar Kowalak
+/właściciel Alpeks Pro/]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5d822fcf-35bd-4370-b15b-ff9cc21a14fe" x="9" y="170" width="91" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM}=="M"?"urodzony":"urodzona"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a494aa7d-7c27-44d6-b6b9-71f5935eaff4" x="10" y="356" width="360" height="52"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Podstawa prawna:
+§16 ust. 3 rozporządzenia ministra gospodarki i pracy z dnia 27 lipca 2004r. w prawie szkolenia w dziedzinie bezpieczeństwa i higieny pracy (Dz. U. nr 180, poz. 1860, z późniejszymi zmianami).
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7a3e8a24-99db-47cd-89da-990d6fb0ee07" x="9" y="208" width="371" height="141"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<text><![CDATA[				                           zorganizowanego w formie instruktażu przez firmę Alpeks Pro z Poznania.
+Cel szkolenia — aktualizacja i uzupełnienie wiedzy oraz umiejętności
+w szczególności z zakresu :
+   a) oceny zagrożeń związanych z wykonywaną pracą,
+   b) metod ochrony przed zagrożeniami dla żdrowia i bezpieczeństwa
+       pracowników,
+   c) kształtowanie warunków pracy w sposób zgodny z przepisami
+       i zasadami bezpieczeństwa i higieny pracy,
+   d) postępowania w razie wypadku i w sytuacjach zagrożeń.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b093ef3b-1fa2-4562-a2a1-f315717c680b" x="67" y="171" width="313" height="22" forecolor="#000066"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URODZONY}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0f9a518-e7ba-4da0-9de6-079cef824122" x="192" y="534" width="183" height="14"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nr zaświadczenia: "+$F{ZASWIADCZENIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="117751d2-178f-4f7d-961a-56b6c68aba35" x="47" y="152" width="333" height="20" forecolor="#000066"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAZWISKO} + " " + $F{IMIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d8c40fd8-09db-41cf-844e-7c5b69602dac" x="10" y="190" width="188" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "ukończył" : "ukończyła"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

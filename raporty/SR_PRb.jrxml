@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SR_PR" language="groovy" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6209897a-1969-42ed-a61b-1ba93eec6d1f">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="384"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `VRAP1` WHERE `DATASZKOLENIA` LIKE '%12.03.2014%']]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATASZKOLENIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="552" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="1" width="20" height="62" uuid="2716fe34-adb3-4961-b12c-4ea5228ec326"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="211" width="21" height="50" uuid="9b5cd497-77a9-48fd-8049-dc3987657d03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="23" y="0" width="1" height="332" uuid="84b171ad-4e2b-4d3d-9fb5-5d414d1457d8"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="429" width="381" height="39" uuid="092ccf15-500f-4355-a4da-23772ade50d9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ROZPORZĄDZENIE MINISTRA GOSPODARKI I PRACY z dnia 27 lipca 2004r. w sprawie szkolenia w dziedzinie bezpieczeństwa i higieny pracy (Dz. U. Nr 180, poz. 1860 z późniejszymi zmianami).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="44" width="65" height="18" uuid="d023d204-bb19-43a7-961a-9a0f185207f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(godzina lekcyjna
+45 minut)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="263" width="65" height="43" uuid="63673b00-32cf-4f21-a7fb-9d171094673e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="0" width="381" height="332" uuid="ba2d97bc-a786-4cdf-8317-eb2a4d6ff23d"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="316" y="211" width="66" height="50" uuid="d8a1447a-c19b-4bc4-bb85-b56d8969df47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="64" width="21" height="42" uuid="eae4ef0c-b90e-4202-8d1c-58a921432461"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="263" width="222" height="43" uuid="1ff024c4-95fd-4e70-afd6-381c7159f981"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Okoliczności i przyczyny charakterystycznych dla wykonywanej pracy wypadków przy pracy oraz związana z nimi profilaktyka.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="263" width="21" height="43" uuid="00411ad5-274b-4451-a8cb-f9f1448d2a8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="306" width="381" height="1" uuid="0798226e-0b76-4b46-87bc-78421c00e6cd"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="26" y="107" width="222" height="103" uuid="ecfd9f5d-f7a9-4ae2-8727-9db5b13f9829"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Zagrożenia czynnikami występującymi w procesach pracy oraz zasady i metody likwidacji lub ograniczenia oddziaływania tych czynników na pracowników - z uwzględnieniem zmian w technologii, organizacji pracy i stanowisk pracy, stosowania środków ochrony zbiorowej i indywidualnej, wprowadzenia nowych urządzeń, sprzętu i narzędzi pracy.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="475" width="381" height="37" uuid="9a465572-d6f1-44c2-a327-395ac2ffcfa1"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Art. 4 ust. 1 pkt 6 ustawy z dnia 24 sierpnia 1991 r. o ochronie przeciwpożarowej (Dz. U. Nr 81, poz. 351 z późniejszymi zmianami, tekst jednolity: Dz. U. z 2002r. Nr 147, poz. 1229 z późniejszymi zmianami: m. in. Dz. U. z 2005r. Nr 100, poz. 835).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="251" y="64" width="64" height="42" uuid="85c9b65f-47ff-4743-8a22-a3bce061f6e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="251" y="307" width="64" height="25" uuid="af2d8bd0-5e5a-4916-83e3-a2f031edf9d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="262" width="381" height="1" uuid="666e4d44-7926-4f95-8010-b482dc96f778"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="1" y="106" width="381" height="1" uuid="0e04c98f-adeb-44ec-9e54-e157444af463"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="251" y="107" width="63" height="103" uuid="42b32ecb-ded7-481f-aea9-65f42587faec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="64" width="66" height="42" uuid="36c32bee-9306-4cc3-a2eb-ec6e5fc33255"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="307" width="65" height="25" uuid="63f06c41-2700-465b-b128-074aa14e89a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="107" width="66" height="103" uuid="7e9ce505-3bbb-48b3-b82b-f326be3fb00a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<line>
+				<reportElement x="250" y="0" width="1" height="332" uuid="5d8bfc61-9e47-48ce-ae20-62be88d9bc51"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="24" y="1" width="226" height="62" uuid="208bd79c-aa1f-44c7-b0ba-f525843dedaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Program szkolenia okresowego
+pracowników zatrudnionych na stanowiskach produkcyjnych.
+Temat szkolenia]]></text>
+			</staticText>
+			<line>
+				<reportElement x="315" y="0" width="1" height="332" uuid="19cbf955-3db7-4392-9e5c-60ce11d90d50"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="1" y="63" width="381" height="1" uuid="66483b40-f71c-44fa-9315-ae7def84c3a0"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="316" y="44" width="65" height="18" uuid="a0d4238a-b880-44dc-8377-f7cfa07506c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(godzina lekcyjna
+45 minut)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="263" width="66" height="44" uuid="b944489d-dd34-4d81-ac85-2919ac1dfc1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="251" y="211" width="63" height="50" uuid="9d041ee0-7926-4b82-baca-49340b441fef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="307" width="224" height="25" uuid="fc308917-8f70-4e74-8c43-acdf3c9cebe6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razem:  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="1" width="65" height="44" uuid="6da79974-0f1e-490d-8168-5fee1ae588ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liczba godzin
+wykładów]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="210" width="381" height="1" uuid="0df8725d-a77d-4afa-bcf0-f2c81101ee34"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="26" y="64" width="222" height="42" uuid="1f8d8c9f-2293-45ce-81da-a755dcec9e0c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Regulacje prawne z zakresu bezpieczeństwa i higieny pracy, z uwzględnieniem przepisów związanych z wykonywaną pracą.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="1" width="65" height="44" uuid="45986cef-4d18-4dc3-86ac-289636a9bb74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liczba godzin
+zajęć praktycznych]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="212" width="222" height="49" uuid="9584ad78-14d0-4ae6-8859-154407730990"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Zasady postępowania w razie wypadku w czasie pracy i w sytuacjach zagrożeń (np. pożaru, awarii), w tym zasady udzielania pierwszej pomocy w razie wypadku.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="107" width="21" height="103" uuid="7aad4b92-dc27-463a-8490-4d840fbd98cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="2" width="20" height="60" uuid="10327729-c083-4662-afc7-397800dcbc16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="211" width="20" height="50" uuid="c21a7c3f-5110-423f-b322-bd524272859b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="0" width="1" height="307" uuid="9da1af8b-5a08-42e6-8b91-743424bc8b4d"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

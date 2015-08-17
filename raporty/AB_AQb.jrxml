@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AB_AQa" language="groovy" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81e85fc7-b224-427d-8020-37d533ba120f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM `vrap1`
+WHERE `DATASZKOLENIA` LIKE '%13.12.2013%']]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATASZKOLENIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="552" splitType="Stretch">
+			<staticText>
+				<reportElement x="315" y="235" width="66" height="50" uuid="3ac75f57-4ced-4a4c-8265-f332ca68773a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="88" width="64" height="42" uuid="628f3a2d-ad54-4dbb-a0a7-beeea9b40c03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="331" width="224" height="25" uuid="e2c455b4-ae1e-4972-9282-df3ff678a5c2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razem:  ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="87" width="381" height="1" uuid="5ce461bd-e603-48c5-acd3-9606a8570e8e"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="287" width="21" height="43" uuid="58edab9c-8ad0-43ce-ab71-cb04c7021e78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="24" width="381" height="416" uuid="f648dfe9-6827-4ffd-a425-89c75c80be06"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="234" width="381" height="1" uuid="f4d018a6-5248-464b-b69c-05ab18ff546f"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="286" width="381" height="1" uuid="27413437-340f-4a35-883a-31c060a6f5f6"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="22" y="24" width="1" height="416" uuid="32ba6a47-9171-4e0d-9ce3-87959fe52f21"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="23" y="25" width="226" height="62" uuid="48195e2d-8f95-4acf-bd33-386f0be3ec76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Program szkolenia okresowego
+pracowników zatrudnionych na stanowiskach administracyjno-biurowych.
+Temat szkolenia]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="348" width="381" height="1" uuid="18c9edae-c7e1-4bc6-bb96-4d3a783bfdff"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="25" y="236" width="222" height="51" uuid="3f275ef9-e4ba-4761-be35-2d9fd4b8e57d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Postęp w zakresie oceny zagrożeń czynnikami występującymi w procesach pracy oraz w zakresie metod ochrony przed zagrożeniami dla zdrowia i życia pracowników.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="236" width="63" height="48" uuid="961cc268-34e3-478c-85dc-1a9b00a866e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="410" width="65" height="29" uuid="f63ae240-4f81-4891-b656-8ba5df82d843"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="351" width="66" height="57" uuid="7c0a0dcc-cf01-4920-a3e5-ba7181e06a3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="68" width="65" height="18" uuid="a79926e9-721d-4962-b9ed-a566f02d8a2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(godzina lekcyjna
+45 minut)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="349" width="222" height="59" uuid="73056efa-8207-4083-9a38-0a70b3f98b7b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Postępowanie w razie wypadków i w sytuacjach zagrożeń (np. pożaru, awarii), w tym zasady ewakuacji ludzi i udzielania pierwszej pomocy w razie wypadku.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="287" width="21" height="62" uuid="bbac98d3-9bd4-4f7f-a0db-353ab7db096c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="68" width="65" height="18" uuid="74f785d6-df6d-4a30-ab6e-964c3c0afbc5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(godzina lekcyjna
+45 minut)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="314" y="24" width="1" height="416" uuid="8bbc000b-6b91-40cf-8cf3-c754a8f0bba5"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="236" width="21" height="48" uuid="f1cf6c54-3ba9-422a-a304-be1d2f7fc323"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="410" width="64" height="28" uuid="33f13e6d-9132-4008-885d-3afcea5da77e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="409" width="381" height="1" uuid="f13dc893-57cd-4a71-9e4f-b7f638800dd6"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="88" width="21" height="146" uuid="de524931-d317-4a26-b1a7-c34ace9f1795"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="453" width="381" height="39" uuid="cfc1257f-a37b-4b61-bffd-3eed71610294"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ROZPORZĄDZENIE MINISTRA GOSPODARKI I PRACY z dnia 27 lipca 2004r. w sprawie szkolenia w dziedzinie bezpieczeństwa i higieny pracy (Dz. U. Nr 180, poz. 1860 z późniejszymi zmianami).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="88" width="66" height="146" uuid="e66787a1-5f64-4321-a065-22ffc0ec3219"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[0]]></text>
+			</staticText>
+			<line>
+				<reportElement x="249" y="24" width="1" height="416" uuid="7f1a5e50-c596-4353-8b6e-75b36e3e1d69"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="25" y="287" width="222" height="59" uuid="93a2b958-3f90-48b1-9fbf-32940a5f213c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Problemy związane z organizacją stanowisk pracy biurowej, z uwzględnieniem zasad ergonomii, w tym stanowisk wyposażonych w monitory ekranowe i inne urządzenia biurowe.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="499" width="381" height="37" uuid="4efd8982-4407-48b1-b753-0d6709ac66be"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Art. 4 ust. 1 pkt 6 ustawy z dnia 24 sierpnia 1991 r. o ochronie przeciwpożarowej (Dz. U. Nr 81, poz. 351 z późniejszymi zmianami, tekst jednolity: Dz. U. z 2002r. Nr 147, poz. 1229 z późniejszymi zmianami: m. in. Dz. U. z 2005r. Nr 100, poz. 835).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="351" width="65" height="57" uuid="e1027e6c-0bd3-44a3-8ce6-14e33283b952"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="236" width="66" height="48" uuid="a13614be-ecc7-46b9-8143-a6f0b7d12935"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="25" width="65" height="44" uuid="1e45de35-dea7-4cf4-9c7d-e9dc0e3ba05c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liczba godzin
+wykładów]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="25" width="65" height="44" uuid="44f6b0ed-aa02-4ef0-814f-7d3b89180951"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liczba godzin
+zajęć praktycznych]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="287" width="63" height="59" uuid="1176a835-e680-46dd-90d2-c8acb9c0726f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="25" width="20" height="62" uuid="9eb74670-6f81-4fe4-a236-9d527add7e23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="88" width="222" height="146" uuid="17bcdb06-7dd8-444c-89bb-33a7be8f4bf6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Wybrane regulacje prawne z zakresu prawa pracy dotyczące bezpieczeństwa i higieny pracy, ochrony ppoż., z uwzględnieniem m.in.:
+a) praw i obowiązków pracowników i pracodawców w zakresie bezpieczeństwa i higieny pracy oraz odpowiedzialności za naruszenie przepisów i zasad bhp,
+b) ochrony pracy kobiet i młodocianych,
+c) wypadków przy pracy i chorób zawodowych oraz świadczeń z nimi związanych,
+d) profilaktycznej ochrony zdrowia pracowników.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="89" width="63" height="145" uuid="f2c599bc-e1fc-4124-a882-8743abf16541"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="287" width="65" height="60" uuid="03c8e05e-3378-4bc1-bbba-aaef03c7c4bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="349" width="19" height="59" uuid="8c42ebeb-efd1-49e2-b373-2818dfc265b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="410" width="64" height="28" uuid="b663581d-6b13-4b7c-bfd1-5d2d4f2868c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razem]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="87" width="381" height="1" uuid="5c73bf0d-d0f4-43a8-9d96-d09b6344434a"/>
+				<graphicElement>
+					<pen lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

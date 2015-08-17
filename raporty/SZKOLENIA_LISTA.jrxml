@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AQUANET_SR_LISTA" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0d8aa53-fb39-48af-9106-e108f8dfd508">
+	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM VRAP1 WHERE ZASWIADCZENIE LIKE '%SR_AQ%' ORDER BY NAZWISKO ASC]]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String"/>
+	<variable name="COUNT_ALL" class="java.lang.String" incrementType="Report" calculation="Count">
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="249" y="1" width="100" height="23" forecolor="#736343" uuid="17efb4e8-dcb9-4b24-9ed7-547b5cb3d5c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[DATA URODZENIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="161" y="1" width="87" height="23" forecolor="#736343" uuid="e749d551-5e1c-4736-b02e-89d0de7ed683"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[IMIĘ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="350" y="1" width="93" height="23" forecolor="#736343" uuid="6884d7ff-fec1-49d9-a777-c127f09dfe49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[WYNIK OGÓLNY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="42" y="1" width="30" height="23" forecolor="#736343" uuid="ba602089-bc46-4776-a20e-2aada555cd2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Lp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="73" y="1" width="87" height="23" forecolor="#736343" uuid="3b904032-1a27-4c57-bf5f-b593009cd66a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[NAZWISKO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="1" width="110" height="23" forecolor="#736343" uuid="234a32cf-3835-4269-9585-190f54a501cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[NR ZAŚWIADCZENIA]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="349" y="0" width="1" height="25" uuid="817d207e-2cef-4d5f-8d7a-2c45789eaa65"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="443" y="0" width="1" height="25" uuid="44b8dfe8-4703-4220-a79f-8aebacc1cef0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="160" y="0" width="1" height="25" uuid="b0d78fe9-97a6-46dc-9562-9d1c541af65a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="248" y="0" width="1" height="25" uuid="2c5a989a-4b86-405a-9d94-80cfc13f38c5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="72" y="0" width="1" height="25" uuid="6acabd80-8d28-4098-92e6-746fba6f1da0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="554" y="0" width="1" height="25" uuid="919110c8-3915-46a8-abd4-8eb8115f48d0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="41" y="0" width="514" height="1" uuid="82a4a7fb-b90a-48b2-b912-923707817051"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="41" y="24" width="514" height="1" uuid="a3ab786c-a8be-4c15-9b07-f4ab7f5a76ed"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Prevent">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Row" mode="Transparent" x="42" y="0" width="30" height="24" forecolor="#000000" backcolor="#FFFFFF" uuid="c6216959-e6db-49e9-ade2-98eda9b25ddd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="0" width="87" height="24" uuid="d6d4639b-5a78-4eaf-a6cb-d3f336cd5999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAZWISKO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="0" width="87" height="24" uuid="9cd8fde1-dc5b-4fd0-ae3f-bbe80dddec3a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IMIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="0" width="100" height="24" uuid="3c26e7a5-c660-49a9-8e14-dc3639b30832"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URODZONY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="110" height="24" uuid="387ebe4f-4a18-40e1-a7a9-ab7f22d6c8cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ZASWIADCZENIE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="350" y="0" width="93" height="24" uuid="32b96662-4be3-4c9f-8d6e-3eac24c46ce0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[dobry]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="72" y="0" width="1" height="25" uuid="b4ad76db-5458-4da0-9d2d-c65de1791f81"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="160" y="0" width="1" height="25" uuid="d203d9bb-40a1-4576-a052-d528a6c5e272"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="248" y="0" width="1" height="25" uuid="1ed64bcb-4724-41c1-9596-f00272a028a4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="349" y="0" width="1" height="25" uuid="0673480f-b1c9-473a-9188-2c3220b0fe71"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="443" y="0" width="1" height="25" uuid="85519a2b-f043-4c15-83a8-7328dad4cc42"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="41" y="-25" width="1" height="25" uuid="796152ea-1a5b-4bf7-946f-eade37b3a01d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="41" y="0" width="1" height="25" uuid="71601eff-60ad-4227-af6a-3bccab8dfa6b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="554" y="0" width="1" height="25" uuid="f7e802a6-97e5-47d4-b701-8e49fadc7738"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="41" y="24" width="513" height="1" uuid="7c633972-1fef-412e-8edd-c733f17be71f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

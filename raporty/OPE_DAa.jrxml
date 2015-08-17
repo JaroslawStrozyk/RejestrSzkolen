@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KP_AQ" language="groovy" pageWidth="612" pageHeight="792" columnWidth="467" leftMargin="65" rightMargin="80" topMargin="65" bottomMargin="0" uuid="3ba1ec79-5c43-455e-a44e-af5abb7ecccb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="239"/>
+	<queryString>
+		<![CDATA[SELECT * FROM VRAP1 WHERE DATASZKOLENIA LIKE '%26.02.2014%']]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATASZKOLENIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="692" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="11" y="14" width="222" height="178" uuid="6667df08-5417-44cd-9412-1ee6d70f199c"/>
+				<imageExpression><![CDATA["C:\\Program Files\\RejestrSzkolen\\raporty\\png\\LogoAlpekspro1.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="286" y="25" width="168" height="150" uuid="3ec05fdf-8e21-4d94-88cd-deb551b56798"/>
+				<imageExpression><![CDATA["C:\\Program Files\\RejestrSzkolen\\raporty\\png\\dalpo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="210" width="467" height="24" uuid="a30718d8-3e8b-45af-bcc7-be6ddaad6fd4"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZAŚWIADCZENIE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="237" width="467" height="20" uuid="185e4589-49d0-447d-9150-6274a41c6b02"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<text><![CDATA[o ukończeniu szkolenia]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="15" y="266" width="188" height="20" uuid="b38e8021-470b-41f1-b718-1642ac7252ca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "Pan" : "Pani"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="288" width="287" height="22" uuid="6b5334d8-1e81-4add-9ab1-6a282caaec80"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM}=="M"?"Data urodzenia":"Data urodzenia"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="288" width="338" height="22" forecolor="#000066" uuid="2758a7da-5a23-4b3d-81e6-b9f999d2b238"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URODZONY}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="312" width="444" height="41" uuid="d6b0702f-5e99-4724-8761-3812ec700d14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "był uczestnikiem szkolenia zorganizowanego przez firmę Alpeks Pro w Poznaniu." : "była uczestnikiem szkolenia zorganizowanego przez firmę Alpeks Pro w Poznaniu."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="542" width="443" height="29" uuid="d46e38aa-b945-456d-8992-040e803cb247"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Art. 207 (§ 1, punkt 3b), art. 209 (§ 1, punkty 1, 2b) Ustawy z dnia 26 czerwca 1974r., Kodeks Pracy z późniejszymi zmianami.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="577" width="131" height="80" uuid="1c22aae7-367a-4685-8906-e316c556bd29"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Przedstawiciel organizatora
+szkolenia
+
+
+Waldemar Kowalak
+właściciel Alpeks Pro
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="15" y="675" width="164" height="14" uuid="2d5434a3-f90a-42b4-9baa-c933d87b141e"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Poznań, "+$F{DATASZKOLENIA}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="675" width="183" height="14" uuid="02c8f58f-1890-4ffb-a48f-a6d0aa938cec"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nr zaświadczenia: "+$F{ZASWIADCZENIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="265" width="369" height="21" forecolor="#000066" uuid="5bd77181-8014-4003-a6d4-0ce1291ae59b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAZWISKO} + " " + $F{IMIE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="528" width="439" height="17" uuid="2cf228de-5fd2-49b0-8ba6-c9d6f064574e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Podstawa prawna:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="352" width="443" height="33" forecolor="#000066" uuid="0d5be987-e7a0-4e37-9326-71a0c88a2f21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ dla wyznaczonych pracowników do wykonywania działań w zakresie zwalczania pożarów  i ewakuacji pracowników]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="394" width="142" height="18" uuid="93791d77-168d-49af-882a-98c6ca453017"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Zlecenie:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="391" width="374" height="21" forecolor="#000066" uuid="7c249bbd-3375-4875-bb9f-f6077a9e354c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma DALPO sp z o.o., ul Jarzębinowa 4 w Rosnowie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="412" width="443" height="114" uuid="4cb382aa-5921-4437-9413-b3f2966ef232"/>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<text><![CDATA[Celem szkolenia było uzupełnienie wiedzy oraz umiejętności w zakresie podstaw ochrony przeciwpożarowej a w szczególności:
+    • zapoznanie z wybranymi przepisami przeciwpożarowymi;
+    • zapoznanie z zasadami prowadzenia ewakuacji obiektu w sytuacjach zagrożenia
+       dla zdrowia i życia ludzi;
+    • zapoznanie z zasadami postępowania w razie pożaru i innego miejscowego
+       zagrożenia;
+    • zapoznanie z obsługą podręcznego sprzętu gaśniczego.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

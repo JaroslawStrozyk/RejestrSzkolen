@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="(A5) OPA_DA" language="groovy" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6209897a-1969-42ed-a61b-1ba93eec6d1f">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="45"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `VRAP1` WHERE `DATASZKOLENIA` LIKE '%09.04.2014%']]>
+	</queryString>
+	<field name="NAZWISKO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IMIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URODZONY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATASZKOLENIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ZASWIADCZENIE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="552" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="a25a425c-d45c-487d-aeaf-abef537ca970" x="1" y="1" width="379" height="550" forecolor="#C8C800"/>
+			</rectangle>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="7f575ecf-3af9-40a3-af60-7e155c932840" x="263" y="11" width="107" height="95"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\dalpo.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="a7ae078b-0037-4382-8e52-f612e46cd100" x="11" y="29" width="181" height="42"/>
+				<imageExpression><![CDATA["C:\\Dropbox\\__PROGRAM_REJESTR_SZKOLEN\\raporty\\png\\logo_ap.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="47f14bff-f5ff-4b44-b1d7-5a82990e75c6" x="5" y="170" width="370" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[o zapoznaniu pracownika z „Instrukcją Bezpieczeństwa Pożarowego”
+obowiązującą w Zakładzie Produkcyjnym Dalpo sp z o.o.w Rosnowie,
+ ul. Jarzębinowa 4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="acb3ef07-cd63-4953-a13b-e9c5cb8b5b89" x="5" y="147" width="370" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZAŚWIADCZENIE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c97f482-a9fc-4137-94b5-33256eef3a63" x="263" y="432" width="107" height="52"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Organizator szkolenia
+
+Waldemar Kowalak
+/właściciel Alpeks Pro/]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bb2371aa-35e9-40d7-b6c9-13da4c28df88" x="5" y="532" width="164" height="14"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Poznań, "+$F{DATASZKOLENIA}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="50fd14db-fe5b-4c3b-82f5-d6faa95c4c08" x="192" y="532" width="183" height="14"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nr zaświadczenia: "+$F{ZASWIADCZENIE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c9ddf775-9442-48b6-b82d-42a744336c17" x="10" y="382" width="360" height="39"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Rozporządzenie Ministra Spraw wewnętrznych i Administracji z 7 czerwca 2010r. w sprawie ochrony przeciwpożarowej budynków i innych obiektów budowlanych i terenów; rozdział 2, §6.1 , pkt. 6 (Dz.U. 109 poz.719)
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="63bb63e0-45f5-4a5f-8508-e1207a2bb14c" x="11" y="309" width="359" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "Został zapoznany z „Instrukcją Bezpieczeństwa Pożarowego” obowiązującą w obiektach Dalpo sp z o.o. w Rosnowie, ul. Jarzębinowa 4." : "Została zapoznana z „Instrukcją Bezpieczeństwa Pożarowego” obowiązującą w obiektach Dalpo sp z o.o. w Rosnowie, ul. Jarzębinowa 4."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5f8cd1ee-b47f-4641-8d6e-e9b17acc3e96" x="11" y="372" width="359" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Podstawa prawna:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a756c684-6cc4-4445-825d-974ac20e960d" x="10" y="267" width="360" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM}=="M"?"Data urodzenia":"Data urodzenia"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ab72d928-348f-495a-afdb-46e2ca88fa6c" x="10" y="282" width="360" height="22" forecolor="#000066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URODZONY}+"r."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1b8029a8-2e20-41fe-b516-ea89d13e0cfd" x="10" y="243" width="360" height="21" forecolor="#000066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAZWISKO} + " " + $F{IMIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95e15c66-ec8d-4ebe-95e0-0bfc79b93abc" x="10" y="227" width="360" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KM} == "M" ? "Pan" : "Pani"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1"/>
+	</columnFooter>
+</jasperReport>
